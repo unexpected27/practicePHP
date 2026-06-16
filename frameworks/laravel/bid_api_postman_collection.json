@@ -1,0 +1,156 @@
+{
+	"info": {
+		"_postman_id": "7a3b1c2d-3e4f-5g6h-7i8j-9k0l1m2n3o4p",
+		"name": "Bid API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET all bids",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/api/bids",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"bids"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET bid by id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/api/bids/1",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"bids",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST bid",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Collector Edition Comic\",\n    \"description\": \"Action Comics #1 in near mint condition.\",\n    \"amount\": 50000.00,\n    \"status\": \"pending\"\n}"
+				},
+				"url": {
+					"raw": "{{base_url}}/api/bids",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"bids"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PATCH bid",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"amount\": 55000.00,\n    \"status\": \"accepted\"\n}"
+				},
+				"url": {
+					"raw": "{{base_url}}/api/bids/1",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"bids",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE bid",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/api/bids/1",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"bids",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:8000"
+		}
+	]
+}
